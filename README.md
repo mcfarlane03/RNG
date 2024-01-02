@@ -2,14 +2,14 @@
 Internet of Things (IoT) Template
 
 ## Getting started
-# Hardware - 
-Download and install the following Arduino IDE libraries:
+# Hardware Setup
+Download and install [Arduuino](https://www.arduino.cc/en/software) IDE. Subsequently, install the following Arduino IDE libraries:
 1. Adafruit GFX Library by Adafruit
 2. Adafruit ILI9341 by Adafruit
 3. ArduinoJson by Benoît Blanchon
 4. PubSubClient by Nick O’Leary
 
-# Backend
+# Backend Setup
 
 
 ## Start Flask API
@@ -23,7 +23,7 @@ $ pip install -r requirements.txt
 $ python run.py
 ```
 
-# Frontend
+# Frontend Setup
 
 ## Recommended IDE Setup
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
