@@ -1,7 +1,6 @@
-# IoT
-Internet of Things (IoT) Template
+# Internet of Things (IoT) Template
 
-## Getting started
+
 # Hardware Setup
 Download and install [Arduuino](https://www.arduino.cc/en/software) IDE. Subsequently, install the following Arduino IDE libraries:
 1. Adafruit GFX Library by Adafruit
