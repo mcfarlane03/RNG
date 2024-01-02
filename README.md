@@ -8,8 +8,9 @@ Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subseque
 3. ArduinoJson by Benoît Blanchon
 4. PubSubClient by Nick O’Leary
 
-# Backend Setup
 
+
+# Backend Setup
 Always ensure to establish a virtual environment and install the necessary packages from your requirements file if you haven't already done so. Following that, activate your virtual environment and proceed to run your Flask API.
 
 ### Create a virtual environment - env
@@ -46,8 +47,8 @@ python3 run.py
 ```
 
 
-# Frontend Setup (Vur js, Vuetify, Vite)
 
+# Frontend Setup ( [Vue js](https://vuejs.org/), [Vuetify](https://vuetifyjs.com/en/components/all/), [Vite](https://vitejs.dev/))
 ## Recommended IDE Setup
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
