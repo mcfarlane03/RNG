@@ -2,25 +2,43 @@
 
 
 # Hardware Setup
-Download and install [Arduuino](https://www.arduino.cc/en/software) IDE. Subsequently, install the following Arduino IDE libraries:
+Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subsequently, install the following Arduino IDE libraries:
 1. Adafruit GFX Library by Adafruit
 2. Adafruit ILI9341 by Adafruit
 3. ArduinoJson by Benoît Blanchon
 4. PubSubClient by Nick O’Leary
 
 # Backend Setup
+Remember to always create a virtual environment and install the packages in your requirements file if you haven't already done so.
+Otherwise, Activate your virtual environment and then run your Flask API.
 
+Create a virtual environment - env
+```sh
+python -m venv env (or python3 -m venv env  on linux)
+```
+Activate env
+```sh
+.\env\Scripts\activate (or source env/bin/activate on linux) 
+```
+Install API requirements
+```sh
+pip install -r requirements.txt 
+```
+Start Flask API
+```sh
+py run.py (or python run.py on linux)
+```
 
-## Start Flask API
-
-Remember to always create a virtual environment and install the packages in your requirements file
 
 ```bash
-$ python -m venv venv (you may need to use python3 instead)
+$ python -m venv env (you may need to use python3 instead)
 $ source venv/bin/activate (or .\venv\Scripts\activate on Windows)
 $ pip install -r requirements.txt 
 $ python run.py
 ```
+
+
+### Start Flask API
 
 # Frontend Setup
 
