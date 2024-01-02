@@ -14,9 +14,11 @@ Always ensure to establish a virtual environment and install the necessary packa
 
 Create a virtual environment - env
 
-Windows ```sh
+Windows 
+```sh
 python -m venv env  
 ```
+Linux
 ```sh
 python3 -m venv env  
 ```
