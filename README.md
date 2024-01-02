@@ -9,12 +9,16 @@ Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subseque
 4. PubSubClient by Nick O’Leary
 
 # Backend Setup
-Remember to always create a virtual environment and install the packages in your requirements file if you haven't already done so.
-Otherwise, Activate your virtual environment and then run your Flask API.
+
+Always ensure to establish a virtual environment and install the necessary packages from your requirements file if you haven't already done so. Following that, activate your virtual environment and proceed to run your Flask API.
 
 Create a virtual environment - env
+
+Windows ```sh
+python -m venv env  
+```
 ```sh
-python -m venv env (or python3 -m venv env  on linux)
+python3 -m venv env  
 ```
 Activate env
 ```sh
