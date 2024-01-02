@@ -60,12 +60,12 @@ Project Setup
 npm install
 ```
 
-Compile and Hot-Reload for Development
+Run dev server (Compile and Hot-Reload for Development)
 ```sh
 npm run dev
 ```
 
-Compile and Minify for Production
+Create a production bundle (Compile and Minify for Production)
 ```sh
 npm run build
 ```
