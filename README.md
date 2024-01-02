@@ -12,7 +12,7 @@ Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subseque
 
 Always ensure to establish a virtual environment and install the necessary packages from your requirements file if you haven't already done so. Following that, activate your virtual environment and proceed to run your Flask API.
 
-###Create a virtual environment - env
+### Create a virtual environment - env
 
 Windows 
 ```sh
