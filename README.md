@@ -22,53 +22,49 @@ Linux
 ```sh
 python3 -m venv env  
 ```
-Activate env
+### Activate env
+Windows
 ```sh
-.\env\Scripts\activate (or source env/bin/activate on linux) 
+.\env\Scripts\activate 
 ```
-Install API requirements
+Linux
+```sh
+source env/bin/activate
+```
+### Install API requirements
 ```sh
 pip install -r requirements.txt 
 ```
-Start Flask API
-```sh
-py run.py (or python run.py on linux)
-```
-
-
-```bash
-$ python -m venv env (you may need to use python3 instead)
-$ source venv/bin/activate (or .\venv\Scripts\activate on Windows)
-$ pip install -r requirements.txt 
-$ python run.py
-```
-
-
 ### Start Flask API
+Windows
+```sh
+py run.py 
+```
+Linux
+```sh
+python3 run.py
+```
 
-# Frontend Setup
+
+# Frontend Setup (Vur js, Vuetify, Vite)
 
 ## Recommended IDE Setup
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-## Customize configuration
-
+Customize configuration
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
-
+Project Setup
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
+Compile and Hot-Reload for Development
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
+Compile and Minify for Production
 ```sh
 npm run build
 ```
