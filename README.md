@@ -2,7 +2,7 @@
 
 
 # Hardware Setup
-Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subsequently, install the following Arduino IDE libraries:
+Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subsequently, install the following Arduino IDE libraries following the tutorial [here](https://support.arduino.cc/hc/en-us/articles/5145457742236-Add-libraries-to-Arduino-IDE):
 1. Adafruit GFX Library by Adafruit
 2. Adafruit ILI9341 by Adafruit
 3. ArduinoJson by Benoît Blanchon
