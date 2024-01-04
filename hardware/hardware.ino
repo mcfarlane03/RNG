@@ -289,10 +289,10 @@ void GDP(void){
   // GENERATE, DISPLAY THEN PUBLISH INTEGER
 
   // GENERATE a random integer 
-  /* Add code here to generate a random integer*/
- 
-  // Assign integer to number variable below
-  number = 0 ;
+  /* Add code here to generate a random integer and then assign 
+     this integer to number variable below
+  */
+   number = 0 ;
 
   // DISPLAY integer on 7Seg. by 
   /* Add code here to calling appropriate function that will display integer to 7-Seg*/
@@ -310,6 +310,6 @@ void GDP(void){
   */
 
   serializeJson(doc, message);  // Seralize / Covert JSon object to JSon string and store in char* array
-  publish("620012345", message);
+  publish(pubtopic, message);
 
 }
