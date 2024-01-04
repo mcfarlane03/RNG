@@ -1,4 +1,4 @@
-# Internet of Things (IoT) Template - RNG with Analysis
+# Internet of Things (IoT) Template - Random Number Generator and Analysis
 
 
 # Hardware Setup
