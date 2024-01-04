@@ -310,6 +310,6 @@ void GDP(void){
   */
 
   serializeJson(doc, message);  // Seralize / Covert JSon object to JSon string and store in char* array
-  publish("620012345", message);
+  publish(pubtopic, message);
 
 }
