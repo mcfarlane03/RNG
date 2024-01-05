@@ -70,7 +70,7 @@ In a command line terminal, run the following commands in the RND/backend/ folde
 Every time after that, run only the second command to start the dev server.
 
 ### In a command line terminal, execute the following commands in the RND/backend/ folder to initiate the dev server for the initial setup. 
-For all subsequent instances, only run the second command to start the dev server.
+### For all subsequent instances, only run the second command to start the dev server.
 
 Project Setup
 ```sh
