@@ -43,6 +43,10 @@ source env/bin/activate
 ```sh
 pip install -r requirements.txt 
 ```
+### Create .env file
+Create a .env file in the backend/ folder to store the application's environment variables. 
+Refer to the lab manual for the specific information that must be added to this file.
+
 ### Start Flask API
 Windows
 ```sh
