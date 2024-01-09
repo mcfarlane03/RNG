@@ -20,7 +20,7 @@ Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subseque
 # Backend Setup
 Always ensure to establish a virtual environment and install the necessary packages from your requirements file if you haven't already done so. Following that, activate your virtual environment and proceed to run your Flask API.
 
-### Create a virtual environment - env
+### Create a virtual environment
 
 Windows 
 ```sh
@@ -30,7 +30,7 @@ Linux
 ```sh
 python3 -m venv env  
 ```
-### Activate env
+### Activate virtual environment
 Windows
 ```sh
 .\env\Scripts\activate 
@@ -39,10 +39,14 @@ Linux
 ```sh
 source env/bin/activate
 ```
-### Install API requirements
+### Install API requirements in the virtual environment
 ```sh
 pip install -r requirements.txt 
 ```
+### Create **.env** file
+Create a **.env** file in the backend/ folder to store the application's environment variables. 
+Refer to the lab manual for the specific information that must be added to this file.
+
 ### Start Flask API
 Windows
 ```sh
@@ -61,6 +65,12 @@ python3 run.py
 
 Customize configuration
 See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+In a command line terminal, run the following commands in the RND/backend/ folder to start the dev server for the first time.
+Every time after that, run only the second command to start the dev server.
+
+### In a command line terminal, execute the following commands in the RND/backend/ folder to initiate the dev server for the initial setup. 
+### For all subsequent instances, only run the second command to start the dev server.
 
 Project Setup
 ```sh
