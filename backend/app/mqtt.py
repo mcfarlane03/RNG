@@ -35,7 +35,7 @@ class MQTT:
 
         # REGISTER CALLBACK FUNCTION FOR EACH TOPIC
         self.client.message_callback_add("620012345", self.gdp)
-        self.client.message_callback_add("620012345_pub", self.update)
+        self.client.message_callback_add("620012345_pub", self.toggle)
         self.client.connect_async("localhost", 1883, 60)
        
 
@@ -91,7 +91,8 @@ class MQTT:
         except Exception as e:
             print(f"MQTT: GDP Error: {str(e)}")
 
-    def update(self,client, userdata, msg):    
+    def toggle(self,client, userdata, msg):    
+        '''Process messages from Frontend'''
         try:
             topic   = msg.topic
             payload = msg.payload.decode("utf-8")
@@ -99,10 +100,11 @@ class MQTT:
             update  = loads(payload) # CONVERT FROM JSON STRING TO JSON OBJECT  
         
             #  ADD YOUR CODE HERE TO PROCESS MESSAGE
-            self.mongo.addUpdate(update) # INSERT INTO DATABASE 
+            print()
 
         except Exception as e:
-            print(f"update Error: {str(e)}")
+            print(f"MQTT: toggle Error - {str(e)}")
+
 
 
      
