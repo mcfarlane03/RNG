@@ -100,7 +100,7 @@ class MQTT:
             update  = loads(payload) # CONVERT FROM JSON STRING TO JSON OBJECT  
         
             #  ADD YOUR CODE HERE TO PROCESS MESSAGE
-            print()
+            print(update)
 
         except Exception as e:
             print(f"MQTT: toggle Error - {str(e)}")
