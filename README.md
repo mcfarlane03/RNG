@@ -67,8 +67,9 @@ Customize configuration
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 
-### In a command line terminal, execute the following commands in the RNG/frontend/ folder to initiate the dev server for the initial setup. 
+### In a command line terminal, execute the first commands in the RNG/frontend/ folder to initiate the dev server for the initial setup. 
 ### For all subsequent instances, only run the second command to start the dev server.
+### Once development is complete, run the final command to generate production files. Please be aware that the generation of production files is not part of this course.
 
 Project Setup
 ```sh
