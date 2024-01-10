@@ -198,8 +198,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
       /*Add code to toggle LED B with appropriate function*/
     }
 
-    // Publish update message back to frontend
-    StaticJsonDocument<768> res; // Create JSon object
+    // PUBLISH UPDATE BACK TO FRONTEND
+    StaticJsonDocument<768> doc; // Create JSon object
     char message[800]  = {0};
 
     // Add key:value pairs to Json object according to below schema
@@ -210,8 +210,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
     according to schema above
     */
 
-    serializeJson(res, message);  // Seralize / Covert JSon object to JSon string and store in char* array  
-    publish(pubtopic, message); 
+    serializeJson(doc, message);  // Seralize / Covert JSon object to JSon string and store in char* array  
+    publish("topic", message);    // Publish to a topic that only the Frontend subscribes to.
           
   } 
 
