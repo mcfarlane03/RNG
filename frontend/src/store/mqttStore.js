@@ -17,7 +17,7 @@ export const useMqttStore =  defineStore('mqtt', ()=>{
     // STATES 
     const mqtt              = ref(null);
     const host              = ref("localhost");  // Host Name or IP address
-    const port              = ref(1883);  // Port number
+    const port              = ref(9002);  // Port number
     const payload           = ref({"id":620012345,"timestamp": 1702566538,"number":0,"ledA":0,"ledB":0}); // Set initial values for payload
     const payloadTopic      = ref("");
     const subTopics         = ref({});
@@ -138,7 +138,8 @@ export const useMqttStore =  defineStore('mqtt', ()=>{
                 var unsubscribeOptions	 = { onSuccess: unSub_onSuccess, onFailure: unSub_onFailure, invocationContext:{"topic":topic} }
                 mqtt.value.unsubscribe(topic, unsubscribeOptions);
             });
-            }          
+            }   
+            disconnect();       
         }
 
 
