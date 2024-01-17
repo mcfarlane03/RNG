@@ -14,7 +14,7 @@ Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subseque
 2. Adafruit ILI9341 by Adafruit
 3. ArduinoJson by Benoît Blanchon
 4. PubSubClient by Nick O’Leary
-5. [Install](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html) the ESP32 Arduino library.
+5. [Install](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html) the ESP32 Arduino library. Install the Stable release.
 
 
 
