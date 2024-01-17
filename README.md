@@ -21,7 +21,7 @@ Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subseque
 # Backend Setup
 Always ensure to establish a virtual environment and install the necessary packages from your requirements file if you haven't already done so. Following that, activate your virtual environment and proceed to run your Flask API.
 
-**The commands below must executed from a command line terminal in the RNG/backend/ folder**
+**The commands below must be executed from a command line terminal in the RNG/backend/ folder**
 ### Create a virtual environment
 
 Windows 
