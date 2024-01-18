@@ -5,7 +5,7 @@ The hardware must generate a random integer upon pressing a button, display it o
 
 The backend is tasked with storing data, published by the hardware, in the database following the schema specified in the hardware specifications. Additionally, it is responsible for making the stored data in the database accessible to the frontend through API routes.
 
-The role of the frontend is to showcase the latest randomly generated integer published by the hardware on a webpage. Additionally, it must offer an interface, in the form of buttons, to toggle the state of two LEDs controlled by the hardware. Furthermore, the webpage should incorporate a chart or graph to illustrate the frequency distribution of each randomly generated integer stored in the database. Finally, it should include an interface, presented as cards, to retrieve and display a count of the amount of times each LED was turned on.
+The role of the frontend is to showcase the latest randomly generated integer published by the hardware on a webpage. Additionally, it must offer an interface, in the form of buttons, to toggle the state of two LEDs controlled by the hardware. Furthermore, the webpage should incorporate a chart or graph to illustrate the frequency distribution of each randomly generated integer stored in the database. Finally, it should include an interface, presented as cards, to retrieve and display a count of the number of times each LED was turned on.
 
 
 # Hardware Setup
@@ -14,12 +14,14 @@ Download and install [Arduino](https://www.arduino.cc/en/software) IDE. Subseque
 2. Adafruit ILI9341 by Adafruit
 3. ArduinoJson by Benoît Blanchon
 4. PubSubClient by Nick O’Leary
+5. [Install](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html) the ESP32 Arduino library. Install the Stable release.
 
 
 
 # Backend Setup
 Always ensure to establish a virtual environment and install the necessary packages from your requirements file if you haven't already done so. Following that, activate your virtual environment and proceed to run your Flask API.
 
+**The commands below must be executed from a command line terminal in the RNG/backend/ folder**
 ### Create a virtual environment
 
 Windows 
