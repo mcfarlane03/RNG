@@ -84,7 +84,7 @@ class MQTT:
             topic   = msg.topic
             payload = msg.payload.decode("utf-8")
             print(payload) # UNCOMMENT WHEN DEBUGGING  
-            #  ADD YOUR CODE HERE TO PROCESS MESSAGE
+            
             update  = loads(payload) # CONVERT FROM JSON STRING TO JSON OBJECT  
             self.mongo.addUpdate(update) # INSERT INTO DATABASE 
 
@@ -99,7 +99,7 @@ class MQTT:
             # print(payload) # UNCOMMENT WHEN DEBUGGING
             update  = loads(payload) # CONVERT FROM JSON STRING TO JSON OBJECT  
         
-            #  ADD YOUR CODE HERE TO PROCESS MESSAGE
+             
             print(update)
 
         except Exception as e:
