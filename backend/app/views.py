@@ -25,7 +25,51 @@ from math import floor
 #   Routing for your application    #
 #####################################
 
+@app.route('/api/numberfrequency', methods=['GET']) 
+def get_numberFrequency():   
+    '''Returns list of frequency'''
+    
+    if request.method == "GET":
+        try:
+            frequency = mongo.numberFrequency()
+            if frequency:
+                return jsonify({"status":"found","data": frequency})
+            
+        except Exception as e:
+            print(f"get_numberFrequency error: f{str(e)}")        
+    return jsonify({"status":"failed","data":[]})
+   
 
+@app.route('/api/oncount/<ledName>', methods=['GET']) 
+def get_onCount(ledName):   
+    '''Returns number which represents the amount of time a specific LED was turned on'''
+    if request.method == "GET":
+        try:
+            LED_Name = escape(ledName)
+            count = mongo.onCount(LED_Name)
+            if count:
+                return jsonify({"status":"found","data": count})
+            
+        except Exception as e:
+            print(f"get_onCount error: f{str(e)}")        
+    return jsonify({"status":"failed","data": 0})
+
+
+@app.route('/api/oncount', methods=['POST']) 
+def get_onCountPost():   
+    '''Returns number which represents the amount of time a specific LED was turned on'''
+    if request.method == "POST":
+        try:
+            form =  request.form
+
+            LED_Name = escape(form.get("LED_Name"))
+            count = mongo.onCount(LED_Name)
+            if count:
+                return jsonify({"status":"found","data": count})
+            
+        except Exception as e:
+            print(f"get_onCountPost error: f{str(e)}")        
+    return jsonify({"status":"failed","data": 0})
    
 
 @app.route('/api/file/get/<filename>', methods=['GET']) 
