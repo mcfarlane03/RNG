@@ -43,20 +43,20 @@
 // DEFINE VARIABLES FOR TWO LEDs AND TWO BUTTONs. LED_A, LED_B, BTN_A , BTN_B
 #define LED_A 4
 /* Complete all others */
-#define LED_B 5
+#define LED_B 16
 
-#define BTN_A 23
+#define BTN_A 22
 
 
 // MQTT CLIENT CONFIG  
-static const char* pubtopic      = "620012345";                    // Add your ID number here
-static const char* subtopic[]    = {"620012345_sub","/elet2415"};  // Array of Topics(Strings) to subscribe to
-static const char* mqtt_server   = "address or ip";         // Broker IP address or Domain name as a String 
+static const char* pubtopic      = "620156144";                    // Add your ID number here
+static const char* subtopic[]    = {"620156144_sub","/elet2415"};  // Array of Topics(Strings) to subscribe to
+static const char* mqtt_server   = "www.yanacreations.com";         // Broker IP address or Domain name as a String 
 static uint16_t mqtt_port        = 1883;
 
 // WIFI CREDENTIALS
-const char* ssid       = "YOUR_SSID"; // Add your Wi-Fi ssid
-const char* password   = "YOUR_PASS"; // Add your Wi-Fi password 
+const char* ssid       = "MonaConnect"; // Add your Wi-Fi ssid
+const char* password   = ""; // Add your Wi-Fi password 
 
 
 
@@ -120,9 +120,10 @@ void setup() {
   pinMode(BTN_A, INPUT_PULLUP);
 
   initialize();           // INIT WIFI, MQTT & NTP 
-  // vButtonCheckFunction(); // UNCOMMENT IF USING BUTTONS THEN ADD LOGIC FOR INTERFACING WITH BUTTONS IN THE vButtonCheck FUNCTION
-
+  vButtonCheckFunction(); // UNCOMMENT IF USING BUTTONS THEN ADD LOGIC FOR INTERFACING WITH BUTTONS IN THE vButtonCheck FUNCTION
   Display(8);
+
+  
 }
   
 
@@ -151,12 +152,9 @@ void vButtonCheck( void * pvParameters )  {
         if (digitalRead(BTN_A) == LOW)
         {
           /* Add code here to execute appropriate function when button A is pressed */
-          toggleLED(LED_A);
+          GDP();
           
         }
-        
-        
-        
 
         vTaskDelay(200 / portTICK_PERIOD_MS);  
     }
@@ -172,7 +170,7 @@ void vUpdate( void * pvParameters )  {
           char message[1100]  = {0};
 
           // Add key:value pairs to JSon object
-          doc["id"]         = "620012345";
+          doc["id"]         = "620156144";
 
           serializeJson(doc, message);  // Seralize / Covert JSon object to JSon string and store in char* array
 
