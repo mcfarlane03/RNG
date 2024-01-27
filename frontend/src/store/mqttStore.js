@@ -16,7 +16,7 @@ export const useMqttStore =  defineStore('mqtt', ()=>{
 
     // STATES 
     const mqtt              = ref(null);
-    const host              = ref("http://www.yanacreations.com");  // Host Name or IP address
+    const host              = ref("www.yanacreations.com");  // Host Name or IP address
     const port              = ref(9002);  // Port number
     const payload           = ref({"id":620156144,"timestamp": 1702566538,"number":0,"ledA":0,"ledB":0}); // Set initial values for payload
     const payloadTopic      = ref("");
@@ -93,7 +93,7 @@ export const useMqttStore =  defineStore('mqtt', ()=>{
 
     const sub_onFailure = (response) => {       
         // called when the subscribe request has failed or timed out.     
-        const topic = response.invocationContext.topic;  
+        const topic = response.invocationContext.topic; 
         console.log(`MQTT: Failed to subscribe to - ${topic} \nError message : ${response.errorMessage}`);  
         }
 

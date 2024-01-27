@@ -4,29 +4,35 @@
         <v-row class="row bg-surfaceVariant" justify="center">
             <v-col class="col col1" align="center">
                 <v-card title="LED A" width="150" density="compact"  border flat rounded="md">   
-                     <v-divider></v-divider>
-                        <v-card-item>     
-                            <v-icon  v-if="payload.ledA == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>     
-                            <v-icon  v-if="payload.ledA == 1" size="50" icon="mdi:mdi-lightbulb-on"  color="yellow"></v-icon>   
-                        </v-card-item>    
+                     <!-- <v-divider></v-divider> -->
+
+                    <v-card-item>
+                        <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED A')"></v-btn>
+                    </v-card-item>
+
+                    <v-card-item>     
+                        <v-icon  v-if="payload.ledA == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>     
+                        <v-icon  v-if="payload.ledA == 1" size="50" icon="mdi:mdi-lightbulb-on"  color="yellow"></v-icon>   
+                    </v-card-item>    
                 
-                        <v-card-item>
-                            <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED A')"></v-btn>
-                        </v-card-item> 
+                        
                 </v-card>
             </v-col>
 
             <v-col class="col col2" align="center">
                 <v-card title="LED B" width="150" density="compact"  border flat rounded="md">   
-                    <v-divider></v-divider>
-                        <v-card-item>     
-                            <v-icon  v-if="payload.ledB == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>    
-                            <v-icon  v-if="payload.ledB == 1" size="50" icon="mdi:mdi-lightbulb-on"  color="yellow"></v-icon>   
-                        </v-card-item>    
+                    <!-- <v-divider></v-divider> -->
+
+                    <v-card-item>
+                        <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED B')"></v-btn>
+                    </v-card-item> 
+
+                    <v-card-item>     
+                        <v-icon  v-if="payload.ledB == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>    
+                        <v-icon  v-if="payload.ledB == 1" size="50" icon="mdi:mdi-lightbulb-on"  color="yellow"></v-icon>   
+                    </v-card-item>    
                                         
-                        <v-card-item>
-                            <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED B')"></v-btn>
-                        </v-card-item> 
+                        
                 </v-card>
             </v-col>
 
@@ -76,7 +82,7 @@ const { payload, payloadTopic } = storeToRefs(Mqtt);
 
 const toggle = (name) => {
     let message = JSON.stringify({"type":"toggle","device": name}); // Create message and convert to a json string   
-    Mqtt.publish("topic",message);  // Publish message to appropriate topic  
+    Mqtt.publish("620156144_sub",message);  // Publish message to appropriate topic  
 }
 
 
@@ -87,8 +93,9 @@ onMounted(()=>{
 
     setTimeout(() => {
         // Subscribe to each topic
-        Mqtt.subscribe("topic1");
-        Mqtt.subscribe("topic2");
+        Mqtt.subscribe("620156144");
+        Mqtt.subscribe("620156144_pub");
+        // Mqtt.subscribe("620156144_sub");
     }, 3000);
 });
 
@@ -117,9 +124,9 @@ onBeforeUnmount(()=>{
     /* border: 1px solid purple; */
 }
 
-.col {
-    /* border: 1px solid green; */
-}
+/* .col {
+    border: 1px solid green; 
+} */
 
 .col1, .col2 {
     max-width: 200px;
