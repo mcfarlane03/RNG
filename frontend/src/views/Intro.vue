@@ -4,7 +4,7 @@
         <v-row class="row bg-surfaceVariant" justify="center">
             <v-col class="col col1" align="center">
                 <v-card title="LED A" width="150" density="compact"  border flat rounded="md">   
-                     <!-- <v-divider></v-divider> -->
+                     <v-divider></v-divider>
 
                      <v-card-item>     
                         <v-icon  v-if="payload.ledA == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>     
@@ -20,7 +20,7 @@
 
             <v-col class="col col2" align="center">
                 <v-card title="LED B" width="150" density="compact"  border flat rounded="md">   
-                    <!-- <v-divider></v-divider> -->
+                    <v-divider></v-divider>
 
                     <v-card-item>     
                         <v-icon  v-if="payload.ledB == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>    
