@@ -171,6 +171,11 @@ void vUpdate( void * pvParameters )  {
 
           // Add key:value pairs to JSon object
           doc["id"]         = "620156144";
+          doc["timestamp"]  = getTimeStamp();
+          doc["number"]     = number;
+          doc["ledA"]       = getLEDStatus(LED_A);
+          doc["ledB"]       = getLEDStatus(LED_B);
+          
 
           serializeJson(doc, message);  // Seralize / Covert JSon object to JSon string and store in char* array
 
