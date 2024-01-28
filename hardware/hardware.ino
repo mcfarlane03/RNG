@@ -256,7 +256,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
     */
 
     serializeJson(doc, message);  // Seralize / Covert JSon object to JSon string and store in char* array  
-    publish("topic", message);    // Publish to a topic that only the Frontend subscribes to.
+    publish("620156144_pub", message);    // Publish to a topic that only the Frontend subscribes to.
           
   } 
 

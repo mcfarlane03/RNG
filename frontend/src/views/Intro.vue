@@ -6,15 +6,14 @@
                 <v-card title="LED A" width="150" density="compact"  border flat rounded="md">   
                      <!-- <v-divider></v-divider> -->
 
-                    <v-card-item>
-                        <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED A')"></v-btn>
-                    </v-card-item>
-
-                    <v-card-item>     
+                     <v-card-item>     
                         <v-icon  v-if="payload.ledA == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>     
                         <v-icon  v-if="payload.ledA == 1" size="50" icon="mdi:mdi-lightbulb-on"  color="yellow"></v-icon>   
                     </v-card-item>    
-                
+
+                    <v-card-item>
+                        <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED A')"></v-btn>
+                    </v-card-item>
                         
                 </v-card>
             </v-col>
@@ -23,16 +22,15 @@
                 <v-card title="LED B" width="150" density="compact"  border flat rounded="md">   
                     <!-- <v-divider></v-divider> -->
 
-                    <v-card-item>
-                        <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED B')"></v-btn>
-                    </v-card-item> 
-
                     <v-card-item>     
                         <v-icon  v-if="payload.ledB == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>    
                         <v-icon  v-if="payload.ledB == 1" size="50" icon="mdi:mdi-lightbulb-on"  color="yellow"></v-icon>   
-                    </v-card-item>    
+                    </v-card-item>  
+                    
+                    <v-card-item>
+                        <v-btn  class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"  @click = "toggle('LED B')"></v-btn>
+                    </v-card-item>                   
                                         
-                        
                 </v-card>
             </v-col>
 
@@ -81,6 +79,7 @@ const Mqtt = useMqttStore();
 const { payload, payloadTopic } = storeToRefs(Mqtt);
 
 const toggle = (name) => {
+    
     let message = JSON.stringify({"type":"toggle","device": name}); // Create message and convert to a json string   
     Mqtt.publish("620156144_sub",message);  // Publish message to appropriate topic  
 }
