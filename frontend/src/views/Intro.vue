@@ -94,7 +94,6 @@ onMounted(()=>{
         // Subscribe to each topic
         Mqtt.subscribe("620156144");
         Mqtt.subscribe("620156144_pub");
-        // Mqtt.subscribe("620156144_sub");
     }, 3000);
 });
 

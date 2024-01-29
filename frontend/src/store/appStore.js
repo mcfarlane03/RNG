@@ -60,7 +60,8 @@ const getOnCount = async(LED_Name) => {
     // FETCH REQUEST WILL TIMEOUT AFTER 60 SECONDS 
     const controller = new AbortController(); 
     const signal = controller.signal; 
-    const id = setTimeout(()=>{controller.abort()},60000); 
+    const id = setTimeout(()=>{controller.abort()},60000);
+
     const form = new FormData(); // Create form 
     form.append("LED_Name",LED_Name); // Add variable to form 
     
@@ -87,7 +88,8 @@ const getOnCount = async(LED_Name) => {
         
         else{ 
             
-            const data = await response.text(); console.warn(data); 
+            const data = await response.text(); 
+            console.warn(data); 
         } 
     } 
     
@@ -114,4 +116,5 @@ const getOnCount = async(LED_Name) => {
         getFrequencies
         
        }
+       
 },{ persist: true  });

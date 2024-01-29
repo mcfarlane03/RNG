@@ -4,7 +4,7 @@
             <!-- R1 -->
             <v-col cols="12" align="center">
                 <!-- R1,C1 -->
-                <canvas id="myCHart"></canvas>
+                <canvas id='myChart'></canvas>
             </v-col>
             <v-col cols="12" align="center">
                 <!-- R1,C2 -->
@@ -45,12 +45,14 @@
 // IMPORTS
 import { ref,reactive,watch ,onMounted,onBeforeUnmount,computed } from "vue";  
 import { useRoute ,useRouter } from "vue-router";
-import Chart from 'chart.js/auto'
+import Chart from "chart.js/auto";
 import { useAppStore } from "@/store/appStore";
+
 
  
  
 // VARIABLES
+
 
 const AppStore = useAppStore();
 
@@ -94,7 +96,7 @@ const config = {    type: 'bar',
 // FUNCTIONS
 onMounted(()=>{
     // THIS FUNCTION IS CALLED AFTER THIS COMPONENT HAS BEEN MOUNTED
-    const ctx = document.querySelector('@myChart'); // Select canvas for rendering chart 
+    const ctx = document.querySelector("#myChart"); // Select canvas for rendering chart 
     chart = new Chart(ctx, config ); // create chart
 });
 
@@ -150,6 +152,19 @@ const updateLEDCount = async(name)=>{
 
 <style scoped>
 /** CSS STYLE HERE */
+
+.mt-5{
+    margin-top: 5;
+}
+
+.mb-5{
+    margin-bottom: 5;
+}
+
+.container{
+    height: 100%;
+    /* border: 1px solid blue; */
+}
 
 
 </style>
