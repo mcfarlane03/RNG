@@ -421,14 +421,7 @@ int8_t getLEDStatus(int8_t LED) {
 
 void setLEDState(int8_t LED, int8_t state){
   // SETS THE STATE OF A SPECIFIC LED
-  if (state == 0)
-  {
-    digitalWrite(LED, LOW);
-  }
-  else if (state == 1)
-  {
-    digitalWrite(LED, HIGH);
-  }   
+  digitalWrite(LED, state);
 }
 
 void toggleLED(int8_t LED){
